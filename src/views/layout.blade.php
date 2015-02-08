@@ -89,6 +89,5 @@
     {!! HTML::script('//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js') !!}
     <!-- AdminLTE App. Required in all pages -->
     {!! HTML::script('adminlte/dist/js/app.min.js') !!}
-    <script src="" type="text/javascript"></script>
   </body>
 </html>
