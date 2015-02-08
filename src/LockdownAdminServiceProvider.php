@@ -16,8 +16,7 @@ class LockdownAdminServiceProvider extends ServiceProvider
 
     public function register()
     {
-
-        dd(base_dir());
+        dd(base_path());
         require __DIR__ . '/routes.php';
     }
 }
