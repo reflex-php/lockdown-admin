@@ -8,15 +8,14 @@ class LockdownAdminServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadViewsFrom(__DIR__ . '/views/', 'lockdown');
-        // $this->publishes(
-        //     __DIR__ . '/public/',
-
-        // );
+        $this->publishes(
+            __DIR__ . '/public/',
+            base_path('/public')
+        );
     }
 
     public function register()
     {
-        dd(base_path());
         require __DIR__ . '/routes.php';
     }
 }
