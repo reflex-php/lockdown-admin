@@ -8,49 +8,16 @@ class LockdownAdminServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadViewsFrom(__DIR__ . '/views/', 'lockdown');
+        // $this->publishes(
+        //     __DIR__ . '/public/',
+
+        // );
     }
 
     public function register()
     {
-        Route::group(
-            ['prefix'   =>  'lockdown'],
-            function() {
-                Route::get(
-                    '/', 
-                    [
-                        'as'    =>  'lockdown.home',
-                        function() {
-                            return \View::make('lockdown::pages.create-role');
-                        },
-                    ]
-                );
 
-                Route::group(
-                    ['prefix'   =>  'roles'],
-                    function() {
-                        Route::get(
-                            '/create', 
-                            [
-                                'as'    =>  'lockdown.roles.create', 
-                                function () {
-                                    return \View::make('lockdown::pages.create-role');
-                                },
-                            ]
-                        );
-
-                        Route::post(
-                            '/create',
-                            [
-                                'as'    =>  'lockdown.roles.create.store',
-                                function () {
-                                    return 'In Development';
-                                }
-                            ]
-                        );
-                    }
-                );
-
-            }
-        );
+        dd(base_dir());
+        require __DIR__ . '/routes.php';
     }
 }
