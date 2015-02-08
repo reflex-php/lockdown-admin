@@ -11,8 +11,9 @@
     <!-- Ionicons -->
     <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
     <!-- ADMINLTE MAIN CSS FILE -->
-    <link href="adminlte/dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
-    <link href="adminlte/dist/css/skins/skin-blue.min.css" rel="stylesheet" type="text/css" />
+    {!! HTML::style('adminlte/dist/css/AdminLTE.min.css') !!}
+    {!! HTML::style('adminlte/dist/css/skins/skin-blue.min.css') !!}
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -83,10 +84,11 @@
     </div><!-- ./wrapper -->
 
     <!-- jQuery 2.1.1: both Bootstrap and AdminLTE dependent on jQuery -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    {!! HTML::script('//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js') !!}
     <!-- Bootstrap 3.3.2 JS -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js" type="text/javascript"></script>
+    {!! HTML::script('//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js') !!}
     <!-- AdminLTE App. Required in all pages -->
-    <script src="adminlte/dist/js/app.min.js" type="text/javascript"></script>
+    {!! HTML::script('adminlte/dist/js/app.min.js') !!}
+    <script src="" type="text/javascript"></script>
   </body>
 </html>
