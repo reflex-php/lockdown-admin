@@ -13,7 +13,7 @@ class LockdownAdminServiceProvider extends ServiceProvider
     public function register()
     {
         $this->publishes(
-            [__DIR__ . '/public/adminlte'   =>  base_path('/public/adminlte')],
+            [__DIR__ . '/../public/adminlte'   =>  base_path('/public/adminlte')],
             'public'
         );
         require __DIR__ . '/routes.php';
