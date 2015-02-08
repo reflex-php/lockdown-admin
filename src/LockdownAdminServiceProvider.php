@@ -9,7 +9,7 @@ class LockdownAdminServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__ . '/views/', 'lockdown');
         $this->publishes(
-            [__DIR__ . '/public/', base_path('/public')]
+            [__DIR__ . '/public/'   =>  base_path('/public')]
         );
     }
 
