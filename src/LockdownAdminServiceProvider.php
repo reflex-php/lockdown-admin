@@ -16,6 +16,6 @@ class LockdownAdminServiceProvider extends ServiceProvider
             [__DIR__ . '/../public/adminlte'   =>  base_path('/public/adminlte')],
             'public'
         );
-        // require __DIR__ . '/routes.php';
+        require __DIR__ . '/routes.php';
     }
 }
