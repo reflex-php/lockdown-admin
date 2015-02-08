@@ -20,7 +20,7 @@
             "Reflex\\LockdownAdmin\\": "src/"
         },
         "files":    [
-            "src/routes.php",
+            "src/routes.php"
         ]
     }
 }
