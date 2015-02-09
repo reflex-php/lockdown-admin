@@ -23,7 +23,11 @@ Route::group(
                         function () {
                             $lockdown   =   App::make('lockdown');
                             $roles      =   $lockdown->findAllRoles();
-                            dd($roles);
+                            $dump       =   [];
+                            foreach ($roles as $key => $role) {
+                                $dump[] =   $role->permissions();
+                            }
+                            dd($dump);
                             return Response::json([]);
                         },
                     ]
