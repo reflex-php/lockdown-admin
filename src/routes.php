@@ -2,8 +2,8 @@
 
 Route::group(
     [
-        'prefix'   =>   'lockdown'
-        'namespace'=>   'Reflex\Lockdown\Http\Controllers'
+        'prefix'   =>   'lockdown',
+        'namespace'=>   'Reflex\Lockdown\Http\Controllers',
     ],
     function() {
         Route::get(
