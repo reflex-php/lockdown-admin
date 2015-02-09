@@ -13,6 +13,8 @@ class LockdownAdminServiceProvider extends ServiceProvider
 
     public function register()
     {
+        $this->app->bind('Reflex\Lockdown\Lockdown', $this->app['lockdown']);
+    
         $this->publishes(
             [__DIR__ . '/../public/adminlte'   =>  base_path('/public/adminlte')],
             'public'
