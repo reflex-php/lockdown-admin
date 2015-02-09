@@ -8,7 +8,7 @@ Route::group(
             [
                 'as'    =>  'lockdown.home',
                 function() {
-                    return \View::make('lockdown::pages.home');
+                    return view('lockdown::pages.home');
                 },
             ]
         );
@@ -16,42 +16,7 @@ Route::group(
         Route::group(
             ['prefix'   =>  'roles'],
             function() {
-                Route::get(
-                    '/',
-                    [
-                        'as'    =>  'lockdown.roles',
-                        function () {
-                            $lockdown   =   App::make('lockdown');
-                            $roles      =   $lockdown->findAllRoles();
-                            $dump       =   [];
-                            foreach ($roles as $key => $role) {
-                                $dump[] =   $role->permissions()->get();
-                            }
-                            dd($dump);
-                            return Response::json([]);
-                        },
-                    ]
-                );
-
-                Route::get(
-                    '/create', 
-                    [
-                        'as'    =>  'lockdown.roles.create', 
-                        function () {
-                            return \View::make('lockdown::pages.create-role');
-                        },
-                    ]
-                );
-
-                Route::post(
-                    '/create',
-                    [
-                        'as'    =>  'lockdown.roles.create.store',
-                        function () {
-                            return 'In Development';
-                        }
-                    ]
-                );
+                Route::resource('roles', 'RoleController');
             }
         );
 
