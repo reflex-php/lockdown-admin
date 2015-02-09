@@ -72,12 +72,11 @@
                   <i class="fa fa-lock"></i> <span>Permission Management</span> <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu" style="display: none;">
-                  {!! HTML::clever_resource('lockdown.permissions', 'View All Permissions') !!}
-                  {!! HTML::clever_resource('lockdown.permissions.create', 'Create a New Permission') !!}
+                  {!! HTML::clever_resource('lockdown.home', 'View All Permissions') !!}
+                  {!! HTML::clever_resource('lockdown.home', 'Create a New Permission') !!}
                 </ul>
               </li>
             </li>
-            {!! HTML::clever_resource('lockdown.users', 'Assign Roles &amp; Permissions to Users') !!}
           </ul>
         </section>
         <!-- /.sidebar -->

@@ -17,6 +17,16 @@ Route::group(
             ['prefix'   =>  'roles'],
             function() {
                 Route::get(
+                    '/',
+                    [
+                        'as'    =>  'lockdown.roles',
+                        function () {
+                            return Response::json(Reflex\Lockdown\Models\Role::all());
+                        },
+                    ]
+                );
+
+                Route::get(
                     '/create', 
                     [
                         'as'    =>  'lockdown.roles.create', 
