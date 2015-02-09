@@ -1,4 +1,4 @@
-<?php namespace Reflex\Lockdown\Http\Controllers;
+<?php namespace Reflex\LockdownAdmin\Http\Controllers;
 
 use Reflex\Lockdown\Lockdown;
 
