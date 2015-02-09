@@ -13,12 +13,6 @@ Route::group(
             ]
         );
 
-        Route::group(
-            ['prefix'   =>  'roles'],
-            function() {
-                Route::resource('roles', 'RoleController');
-            }
-        );
-
+        Route::resource('roles', 'RoleController');
     }
 );
