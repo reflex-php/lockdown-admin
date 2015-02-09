@@ -21,7 +21,8 @@ Route::group(
                     [
                         'as'    =>  'lockdown.roles',
                         function () {
-                            return Response::json(Reflex\Lockdown\Models\Role::all());
+                            $lockdown   =   App::make('lockdown');
+                            return Response::json($lockdown->findAllRoles());
                         },
                     ]
                 );
