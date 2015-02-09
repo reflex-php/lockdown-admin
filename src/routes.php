@@ -8,7 +8,7 @@ Route::group(
             [
                 'as'    =>  'lockdown.home',
                 function() {
-                    return \View::make('lockdown::pages.create-role');
+                    return \View::make('lockdown::pages.home');
                 },
             ]
         );
