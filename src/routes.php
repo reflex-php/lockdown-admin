@@ -22,7 +22,9 @@ Route::group(
                         'as'    =>  'lockdown.roles',
                         function () {
                             $lockdown   =   App::make('lockdown');
-                            return Response::json($lockdown->findAllRoles()->permissions()));
+                            $roles      =   $lockdown->findAllRoles();
+                            $permissions=   $roles->permissions();
+                            return Response::json($permissions);
                         },
                     ]
                 );
