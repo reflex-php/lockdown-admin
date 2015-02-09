@@ -61,7 +61,7 @@
                   <i class="fa fa-group"></i> <span>Role Management</span> <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu" style="display: none;">
-                  {!! HTML::clever_resource('lockdown.roles', 'View All Roles') !!}
+                  {!! HTML::clever_resource('lockdown.roles.index', 'View All Roles') !!}
                   {!! HTML::clever_resource('lockdown.roles.create', 'Create a New Role') !!}
                 </ul>
               </li>
