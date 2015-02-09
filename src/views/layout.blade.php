@@ -54,7 +54,17 @@
                     <small class="text text-info">{!! Auth::user()->email !!}</small>
                 </div>
             </div>
-            <li>{!! HTML::clever_resource('lockdown.roles.create', 'Create a New Role') !!}</li>
+            <li class="header">Navigation</li>
+            <li class="treeview-menu">
+              <li class="treeview active">
+                <a href="#">
+                  <i class="fa fa-dashboard"></i> <span>Role Management</span> <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu" style="display: none;">
+                  {!! HTML::clever_resource('lockdown.roles.create', 'Create a New Role') !!}
+                </ul>
+              </li>
+            </li>
           </ul>
         </section>
         <!-- /.sidebar -->
