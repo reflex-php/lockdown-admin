@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('lockdown::layout')
 
 @section('subtitle')
     <h2>Welcome to Lockdown Administration</h2>

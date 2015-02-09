@@ -56,7 +56,7 @@
             </div>
             <li class="header">Navigation</li>
             <li class="treeview-menu">
-              <li class="treeview active">
+              <li class="treeview">
                 <a href="#">
                   <i class="fa fa-dashboard"></i> <span>Role Management</span> <i class="fa fa-angle-left pull-right"></i>
                 </a>
