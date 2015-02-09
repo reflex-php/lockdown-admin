@@ -9,12 +9,6 @@
         }
     ],
     "minimum-stability": "dev",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "/Users/mikeshellard/Documents/projects/packages/reflex/lockdown"
-        }
-   ],
     "require": {
         "php": ">=5.4.0",
         "reflex/lockdown":  "dev-master"
