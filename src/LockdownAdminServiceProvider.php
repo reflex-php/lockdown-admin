@@ -7,6 +7,7 @@ class LockdownAdminServiceProvider extends ServiceProvider
 {
     public function boot()
     {
+        require __DIR__ . '/routes.php';
         $this->loadViewsFrom(__DIR__ . '/views/', 'lockdown');
     }
 
@@ -16,6 +17,5 @@ class LockdownAdminServiceProvider extends ServiceProvider
             [__DIR__ . '/../public/adminlte'   =>  base_path('/public/adminlte')],
             'public'
         );
-        require __DIR__ . '/routes.php';
     }
 }
