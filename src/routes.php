@@ -25,7 +25,7 @@ Route::group(
                             $roles      =   $lockdown->findAllRoles();
                             $dump       =   [];
                             foreach ($roles as $key => $role) {
-                                $dump[] =   $role->permissions()->getAttributes();
+                                $dump[] =   $role->permissions()->get()->getAttributes();
                             }
                             dd($dump);
                             return Response::json([]);
