@@ -18,7 +18,6 @@
     "autoload": {
         "psr-4":    {
             "Reflex\\LockdownAdmin\\": "src/",
-            "Reflex\\LockdownAdmin\\Http\\": "src/app/Http/"
         }
     }
 }

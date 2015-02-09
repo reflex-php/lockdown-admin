@@ -13,6 +13,6 @@ Route::group(
             ]
         );
 
-        Route::resource('roles', 'Controllers\RoleController');
+        Route::resource('roles', 'RoleController');
     }
 );
