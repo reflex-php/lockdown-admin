@@ -12,6 +12,22 @@ class BaseController extends Controller
     }
 
     /**
+     * Handle calls to missing methods on the controller.
+     *
+     * @param  array   $parameters
+     * @return mixed
+     */
+    public function missingMethod($parameters = array())
+    {
+        return view('lockdown::errors.404');
+    }
+
+    public function __call($method, $parameters)
+    {
+        return $this->missingMethod($parameters);
+    }
+
+    /**
      * Setup the layout used by the controller.
      *
      * @return void
