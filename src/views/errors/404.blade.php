@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="box box-error">
+    <div class="box box-danger">
         <div class="box-header">
             <h3>Page Not Found | 404</h3>
         </div>
