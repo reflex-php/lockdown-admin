@@ -17,6 +17,6 @@ class RoleController extends BaseController
 
     public function store()
     {
-        return response()->return();
+        return response()->back()->withInput();
     }
 }
