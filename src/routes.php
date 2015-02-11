@@ -16,6 +16,10 @@ Route::group(
                     ]
                 );
 
+                Route::get('login', ['as' => 'login', function() {
+                    return 'Login Please...';
+                }]);
+
                 Route::resource('roles', 'RoleController');
             }
         );

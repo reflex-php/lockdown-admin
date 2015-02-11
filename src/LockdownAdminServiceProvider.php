@@ -3,6 +3,7 @@ namespace Reflex\LockdownAdmin;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
+use Illuminate\Foundation\Application;
 
 /**
  * LockdownAdminServiceProvider
