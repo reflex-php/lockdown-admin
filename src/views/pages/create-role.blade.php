@@ -13,7 +13,7 @@
         <div class="box-header">
             <h3 class="box-title">Create A New Role</h3>
         </div>
-        {!! Form::open(['route' => ['lockdown.roles.create.store'], 'class' => 'form-horizontal', 'role' => 'form', 'autocomplete' => 'on', 'method' => 'post']) !!}
+        {!! Form::open(['route' => ['lockdown.roles.store'], 'class' => 'form-horizontal', 'role' => 'form', 'autocomplete' => 'on', 'method' => 'post']) !!}
         <div class="box-body">
             {!! HTML::error_block($errors) !!}
             <div class="form-group">
