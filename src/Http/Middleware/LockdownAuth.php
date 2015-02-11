@@ -4,8 +4,8 @@ namespace Reflex\LockdownAdmin\Http\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Routing\Middleware;
-use Reflex\Lockdown\Lockdown;
 use Config;
+use Auth;
 
 class LockdownAuth implements Middleware
 {
