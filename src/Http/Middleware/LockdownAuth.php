@@ -7,7 +7,7 @@ use Illuminate\Contracts\Routing\Middleware;
 use Reflex\Lockdown\Lockdown;
 use Config;
 
-class LockdownAuth extends Middleware
+class LockdownAuth implements Middleware
 {
     public function handle($request, Closure $next)
     {
