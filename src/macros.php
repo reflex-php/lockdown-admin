@@ -44,7 +44,7 @@ HTML::macro(
 HTML::macro('error_block', function (Illuminate\Support\ViewErrorBag $errors) {
     $html   =   '';
 
-    foreach ($errors->all('<li class="text-danger">:message</li>') as $error) {
+    foreach ($errors->all('<li">:message</li>') as $error) {
         $html   .=  $error;
     }
 
