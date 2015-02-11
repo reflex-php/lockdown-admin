@@ -11,7 +11,7 @@ class LockdownAuth extends Middleware
 {
     public function handle($request, Closure $next)
     {
-        $authLevelRequired  =   Config::get('lockdown::lockdown-admin.auth-level');
+        $authLevelRequired  =   Config::get('lockdown.admin.auth-level');
         if (Auth::is($authLevelRequired)) {
             return $next($request);
         }
