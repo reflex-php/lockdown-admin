@@ -27,7 +27,7 @@ Route::group(
                     ['middleware' => 'lockdown.guest'],
                     function() {
                         Route::get('login', function() {
-                            return 'Login Please...';
+                            return view('lockdown::pages.login');
                         });
                     }
                 );    
