@@ -16,7 +16,7 @@ Route::group(
                     ]
                 );
 
-                Route::get('login', ['as' => 'login', function() {
+                Route::get('login', ['middleware' => 'lockdown.auth', 'as' => 'login', function() {
                     return 'Login Please...';
                 }]);
 
