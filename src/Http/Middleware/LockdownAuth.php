@@ -1,6 +1,6 @@
 <?php
 
-namespace Reflex\Lockdown\Http\Middleware;
+namespace Reflex\LockdownAdmin\Http\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Routing\Middleware;
