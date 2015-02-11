@@ -11,11 +11,13 @@ class LockdownAuth implements Middleware
 {
     public function handle($request, Closure $next)
     {
-        $authLevelRequired  =   Config::get('lockdown.admin.auth-level');
-        if (Auth::is($authLevelRequired)) {
+        $rolesRequired      =   Config::get('lockdown.admin.roles');
+        $allRequired        =   Config::get('lockdown.admin.all');
+        $afterFailedAuthUrl =   Config::get('lockdown.admin.login-route');
+        if (Auth::is($rolesRequired, $allRequired)) {
             return $next($request);
         }
 
-        return redirect()->route('lockdown.login');
+        return redirect()->route($afterFailedAuthUrl);
     }
 }

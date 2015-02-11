@@ -21,16 +21,7 @@ Route::group(
 
                         Route::resource('roles', 'RoleController');
                     }
-                );
-
-                Route::group(
-                    ['middleware' => 'lockdown.guest'],
-                    function() {
-                        Route::get('login', function() {
-                            return view('lockdown::pages.login');
-                        });
-                    }
-                );    
+                );  
             }
         );
     }
