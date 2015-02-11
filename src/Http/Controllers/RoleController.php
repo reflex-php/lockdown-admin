@@ -1,7 +1,7 @@
 <?php namespace Reflex\LockdownAdmin\Http\Controllers;
 
 use Reflex\LockdownAdmin\Http\Requests\Role as RoleRequest;
-use Reflex\Lockdown\Lockdown
+use Reflex\Lockdown\Lockdown;
 
 class RoleController extends BaseController
 {
