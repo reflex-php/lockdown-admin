@@ -17,7 +17,7 @@ Route::group(
                 );
 
                 Route::get('login', ['as' => 'login', function() {
-                    return 'Login Please...';
+                    return 'Login Please...' . Config::get('lockdown.admin');
                 }]);
 
                 Route::resource('roles', 'RoleController');
