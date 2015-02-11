@@ -1,0 +1,15 @@
+@extends('lockdown::layout')
+
+@section('subtitle')
+    <h2>Page Not Found | 404</h2>
+@endsection
+
+@section('content')
+    <div class="box box-error">
+        <div class="box-header">
+            <h3>Page Not Found | 404</h3>
+        </div>
+        <div class="box-body">The Page '{{ Request::url() }}' couldn't be found</div>
+        <div class="box-footer">...</div>
+    </div>
+@endsection
