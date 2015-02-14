@@ -34,7 +34,7 @@
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
                     {!! Form::submit('Create', ['class' => 'btn btn-primary', 'id' => 'create-submit']) !!}
-                    {!! link_to_route('lockdown.home', 'Cancel', [], ['class' => 'btn btn-danger']) !!}
+                    {!! link_to_route('lockdown.roles.index', 'Cancel', [], ['class' => 'btn btn-danger']) !!}
                 </div>
             </div>
         </div>
