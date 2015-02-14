@@ -1,7 +1,7 @@
 @extends('lockdown::layout')
 
 @section('subtitle')
-    Role Management
+    <h2>Role Management</h2>
 @endsection
 
 @section('content')
