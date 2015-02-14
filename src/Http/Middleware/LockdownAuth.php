@@ -14,15 +14,15 @@ class LockdownAuth implements Middleware
      * Auth instance
      * @var \Illuminate\Contracts\Auth\Guard
      */
-    protected $guard;
+    protected $auth;
 
     /**
      * Class Constructor
-     * @param \Illuminate\Contracts\Auth\Guard $guard Auth instance
+     * @param \Illuminate\Contracts\Auth\Guard $auth Auth instance
      */
-    public function __construct(GuardContract $guard)
+    public function __construct(GuardContract $auth)
     {
-        $this->guard    =   $guard;
+        $this->auth =   $auth;
     }
 
     public function handle($request, Closure $next)
