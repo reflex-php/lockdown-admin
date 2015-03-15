@@ -9,7 +9,7 @@
         <div class="box-header">
             <h3>Information</h3>
         </div>
-        <div class="box-body">Some stoof</div>
+        <div class="box-body">Some stoof about life... I'm amazing. Oh Yes.</div>
         <div class="box-footer">...</div>
     </div>
 @endsection
