@@ -12,7 +12,7 @@
     "require": {
         "php": ">=5.4.0",
         "laravel/laravel": "~5.0",
-        "reflex/lockdown": "master"
+        "reflex/lockdown": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit":  "~4.0"
