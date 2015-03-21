@@ -4,6 +4,7 @@ namespace Reflex\LockdownAdmin;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Illuminate\Foundation\Application;
+use Illuminate\Foundation\AliasLoader;
 
 /**
  * LockdownAdminServiceProvider
@@ -36,10 +37,26 @@ class LockdownAdminServiceProvider extends ServiceProvider
     public function register()
     {
         $this->registerLockdownAdminConfiguration();
+        $this->registerHtmlProvider();
         $this->publishes(
             [__DIR__ . '/../public/adminlte'   =>  base_path('/public/adminlte')],
             'public'
         );
+    }
+
+    public function registerHtmlProvider()
+    {
+        $this->app->register('Collective\Html\HtmlServiceProvider');
+
+        if (! $this->isAliasLoaded('Form')) {
+            AliasLoader::getInstance()->alias('Form', 'Collective\Html\FormFacade');
+        }
+
+        if (! $this->isAliasLoaded('HTML')) {
+            AliasLoader::getInstance()->alias('HTML', 'Collective\Html\HtmlFacade');
+        }
+
+        require __DIR__ . '/macros.php';
     }
 
     /**
@@ -65,6 +82,11 @@ class LockdownAdminServiceProvider extends ServiceProvider
                 'lockdown.admin'
             );
         }
+    }
+
+    public function isAliasLoaded($alias)
+    {
+        return array_key_exists($alias, AliasLoader::getInstance()->getAliases());
     }
 
     /**

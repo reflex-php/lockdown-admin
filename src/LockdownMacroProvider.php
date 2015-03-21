@@ -1,7 +1,7 @@
 <?php
 namespace Reflex\LockdownAdmin;
 
-use Illuminate\Html\HtmlServiceProvider;
+use Collective\Html\HtmlServiceProvider;
 
 class LockdownMacroProvider extends HtmlServiceProvider
 {
