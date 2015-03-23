@@ -20,6 +20,9 @@
     "autoload": {
         "psr-4":    {
             "Reflex\\LockdownAdmin\\": "src/"
-        }
+        },
+        "files":    [
+            "src/helpers.php"
+        ]
     }
 }
