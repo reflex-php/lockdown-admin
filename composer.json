@@ -1,14 +1,19 @@
 {
     "name": "reflex/lockdown-admin",
     "description": "Administration panel for Lockdown",
+    "keywords": ["laravel", "administration", "acl", "lockdown"],
+    "license": "MIT",
+    "homepage": "https://github.com/reflex-php/lockdown-admin",
+    "support": {
+        "issues": "https://github.com/reflex-php/lockdown-admin/issues",
+        "source": "https://github.com/reflex-php/lockdown-admin"
+    },
     "authors": [
         {
             "name": "Mike Shellard",
-            "email": "me@aziri.us",
-            "role": "Head Developer"
+            "email": "mike.shellard@outlook.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "php": ">=5.4.0",
         "reflex/lockdown": "dev-master",
@@ -24,5 +29,6 @@
         "files":    [
             "src/helpers.php"
         ]
-    }
+    },
+    "minimum-stability": "dev"
 }
