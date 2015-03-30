@@ -42,6 +42,11 @@ class LockdownAdminServiceProvider extends ServiceProvider
             [__DIR__ . '/../public/adminlte'   =>  base_path('/public/adminlte')],
             'public'
         );
+
+        $this->publishes(
+            [__DIR__ . '/views'   =>  base_path('/resources/views')],
+            'views'
+        );
     }
 
     public function registerHtmlProvider()
