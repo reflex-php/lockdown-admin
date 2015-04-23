@@ -19,6 +19,7 @@ class BaseController extends Controller
      */
     public function missingMethod($parameters = array())
     {
+        return;
         return view('lockdown::errors.404');
     }
 
