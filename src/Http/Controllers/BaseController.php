@@ -4,28 +4,19 @@ use Reflex\Lockdown\Lockdown;
 
 class BaseController extends Controller
 {   
+    /**
+     * Lockdown instance
+     * @var Lockdown
+     */
     protected $lockdown;
 
+    /**
+     * Constructor
+     * @param Lockdown $lockdown Lockdown instance
+     */
     public function __construct(Lockdown $lockdown)
     {
         $this->lockdown =   $lockdown;
-    }
-
-    /**
-     * Handle calls to missing methods on the controller.
-     *
-     * @param  array   $parameters
-     * @return mixed
-     */
-    public function missingMethod($parameters = array())
-    {
-        dd('End here...');
-        return view('lockdown::errors.404');
-    }
-
-    public function __call($method, $parameters)
-    {
-        return $this->missingMethod($parameters);
     }
 
     /**
@@ -35,8 +26,7 @@ class BaseController extends Controller
      */
     protected function setupLayout()
     {
-        if ( ! is_null($this->layout))
-        {
+        if (! is_null($this->layout)) {
             $this->layout = view($this->layout);
         }
     }
