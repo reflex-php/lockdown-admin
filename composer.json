@@ -11,7 +11,7 @@
     "authors": [
         {
             "name": "Mike Shellard",
-            "email": "mike.shellard@outlook.com"
+            "email": "contact@mikeshellard.me"
         }
     ],
     "require": {
@@ -27,7 +27,7 @@
             "Reflex\\LockdownAdmin\\": "src/"
         },
         "files":    [
-            "src/helpers.php"
+            "src/Reflex/LockdownAdmin/helpers.php"
         ]
     },
     "minimum-stability": "dev"
