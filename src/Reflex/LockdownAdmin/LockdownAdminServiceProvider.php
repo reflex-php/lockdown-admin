@@ -39,7 +39,7 @@ class LockdownAdminServiceProvider extends ServiceProvider
         $this->registerLockdownAdminConfiguration();
         $this->registerHtmlProvider();
         $this->publishes(
-            [__DIR__ . '/../public/adminlte'   =>  base_path('/public/adminlte')],
+            [__DIR__ . '/../../public/adminlte'   =>  public_path('adminlte')],
             'public'
         );
 
