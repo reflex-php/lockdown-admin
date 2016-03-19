@@ -15,9 +15,9 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
+        "php": ">=5.5.9",
         "reflex/lockdown": "dev-master",
-        "laravelcollective/html": "~5.0"
+        "laravelcollective/html": "5.2.*",  
     },
     "require-dev": {
         "phpunit/phpunit":  "~4.0"
